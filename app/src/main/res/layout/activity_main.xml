@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="?attr/colorPrimary">
+
+
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/O1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+        <Button
+            android:id="@+id/pointButton"
+            android:onClick="onDecimal"
+            style="@style/Theme.Calculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_default_prop"
+            android:text="."
+            app:layout_constraintEnd_toStartOf="@id/zeroButton"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/zeroButton"
+            android:onClick="onDigit"
+            style="@style/Theme.Calculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_default_prop"
+            android:textSize="50dp"
+            android:text="0"
+            app:layout_constraintEnd_toStartOf="@id/deleteButton"
+            app:layout_constraintStart_toEndOf="@id/pointButton" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:onClick="onDelete"
+            style="@style/Theme.Calculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_default_prop"
+            android:foreground="@drawable/backspace_icon"
+            android:foregroundGravity="center"
+            app:layout_constraintEnd_toStartOf="@id/equalButton"
+            app:layout_constraintStart_toEndOf="@+id/zeroButton" />
+
+        <Button
+            android:id="@+id/equalButton"
+            android:onClick="onEqual"
+            android:textSize="50dp"
+            android:text="="
+            android:textColor="@color/white"
+            android:backgroundTint="@color/op"
+            style="@style/Theme.Calculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_default_prop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/deleteButton" />
+
+
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/O2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toTopOf="@id/O1"
+        tools:ignore="MissingConstraints">
+
+
+        <Button
+            android:id="@+id/oneButton"
+            android:onClick="onDigit"
+            style="@style/Theme.Calculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_default_prop"
+            android:text="1"
+            android:textSize="50dp"
+            app:layout_constraintEnd_toStartOf="@id/twoButton"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/twoButton"
+            android:onClick="onDigit"
+            style="@style/Theme.Calculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_default_prop"
+            android:textSize="50dp"
+            android:text="2"
+            app:layout_constraintEnd_toStartOf="@id/threeButton"
+            app:layout_constraintStart_toEndOf="@id/oneButton" />
+
+        <Button
+            android:id="@+id/threeButton"
+            android:onClick="onDigit"
+            style="@style/Theme.Calculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_default_prop"
+            android:textSize="50dp"
+            android:text="3"
+            app:layout_constraintEnd_toStartOf="@id/plusButton"
+            app:layout_constraintStart_toEndOf="@+id/twoButton" />
+
+        <Button
+            android:id="@+id/plusButton"
+            android:onClick="onOperation"
+            android:textSize="50dp"
+            android:text="+"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/op"
+            style="@style/Theme.Calculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_default_prop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/threeButton" />
+
+
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/O3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toTopOf="@id/O2"
+        tools:ignore="MissingConstraints">
+
+
+        <Button
+            android:id="@+id/fourButton"
+            android:onClick="onDigit"
+            style="@style/Theme.Calculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_default_prop"
+            android:text="4"
+            android:textSize="50dp"
+            app:layout_constraintEnd_toStartOf="@id/fiveButton"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/fiveButton"
+            android:onClick="onDigit"
+            style="@style/Theme.Calculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_default_prop"
+            android:textSize="50dp"
+            android:text="5"
+            app:layout_constraintEnd_toStartOf="@id/sexButton"
+            app:layout_constraintStart_toEndOf="@id/fourButton" />
+
+        <Button
+            android:id="@+id/sexButton"
+            android:onClick="onDigit"
+            style="@style/Theme.Calculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_default_prop"
+            android:textSize="50dp"
+            android:text="6"
+            app:layout_constraintEnd_toStartOf="@id/minusButton"
+            app:layout_constraintStart_toEndOf="@+id/fiveButton" />
+
+        <Button
+            android:id="@+id/minusButton"
+            android:onClick="onOperation"
+            android:textSize="50dp"
+            android:text="-"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/op"
+            style="@style/Theme.Calculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_default_prop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/sexButton" />
+
+
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/O4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toTopOf="@id/O3"
+        tools:ignore="MissingConstraints">
+
+
+        <Button
+            android:id="@+id/sevenButton"
+            android:onClick="onDigit"
+            style="@style/Theme.Calculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_default_prop"
+            android:text="7"
+            android:textSize="50dp"
+            app:layout_constraintEnd_toStartOf="@id/eightButton"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/eightButton"
+            android:onClick="onDigit"
+            style="@style/Theme.Calculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_default_prop"
+            android:textSize="50dp"
+            android:text="8"
+                app:layout_constraintEnd_toStartOf="@id/nineButton"
+            app:layout_constraintStart_toEndOf="@id/sevenButton" />
+
+        <Button
+            android:id="@+id/nineButton"
+            android:onClick="onDigit"
+            style="@style/Theme.Calculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_default_prop"
+            android:textSize="50dp"
+            android:text="9"
+            app:layout_constraintEnd_toStartOf="@id/multButton"
+            app:layout_constraintStart_toEndOf="@+id/eightButton" />
+
+        <Button
+            android:id="@+id/multButton"
+            android:onClick="onOperation"
+            android:textSize="50dp"
+            android:text="×"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/op"
+            style="@style/Theme.Calculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_default_prop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/nineButton" />
+
+
+    </android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/O5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toTopOf="@id/O4"
+        tools:ignore="MissingConstraints">
+
+
+        <Button
+            android:id="@+id/clearButton"
+            android:onClick="onClear"
+            style="@style/Theme.Calculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_default_prop"
+            android:text="C"
+            android:textSize="50dp"
+            android:backgroundTint="@color/C"
+            app:layout_constraintEnd_toStartOf="@id/nigativeButton"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/nigativeButton"
+            android:onClick="onNegative"
+            android:backgroundTint="@color/C"
+            style="@style/Theme.Calculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_default_prop"
+            android:textSize="50dp"
+            android:text="+/-"
+            app:layout_constraintEnd_toStartOf="@id/moduloButton"
+            app:layout_constraintStart_toEndOf="@id/clearButton" />
+
+        <Button
+            android:id="@+id/moduloButton"
+            android:onClick="onOperation"
+            android:backgroundTint="@color/C"
+            style="@style/Theme.Calculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_default_prop"
+            android:textSize="50dp"
+            android:text="%"
+            app:layout_constraintEnd_toStartOf="@id/divideButton"
+            app:layout_constraintStart_toEndOf="@+id/nigativeButton" />
+
+        <Button
+            android:id="@+id/divideButton"
+            android:onClick="onOperation"
+            android:textSize="50dp"
+            android:text="÷"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/op"
+            style="@style/Theme.Calculator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_default_prop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/moduloButton" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/O5">
+
+        <TextView
+            android:id="@+id/resultText"
+            android:text="0"
+            android:textSize="75dp"
+            android:maxLength="8"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:paddingRight="25dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/operationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:alpha="0.5"
+            android:paddingRight="25dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@id/resultText"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <Switch
+        android:id="@+id/nightLight"
+        android:track="@drawable/night_light_track"
+        android:thumb="@drawable/night_light_thumb"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf= "parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</android.support.constraint.ConstraintLayout>
